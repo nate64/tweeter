@@ -1,0 +1,9 @@
+<h1>Confirm Your Bio Details</h1>
+<div><h4>First Name: <%= current_user.first_name%></h4></div>
+<div><h4>Last Name: <%= current_user.last_name%></h4></div>
+<div><h4>Email: <%= current_user.email%></h4></div>
+
+<div><%=link_to 'Confirm', bios_path, method: :post%></div>
+
+
+<div><%=link_to 'Cancel', root_path%></div>

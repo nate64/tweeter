@@ -1,0 +1,22 @@
+
+<div class="image">
+  <img
+    src="https://robohash.org/<%= @bio.get_avatar %>?set=set3"
+    alt="avatar"
+  />
+</div>
+<div>
+  <h2> First Name: <%= @bio.user.first_name %> </h2>
+</div>
+<div>
+  <h2> Last Name: <%= @bio.user.last_name %> </h2>
+</div>
+<div>
+  <h2> <%= "#{@bio.user.first_name}\'s "%>Email: <%= @bio.user.email %> </h2>
+</div>
+<div>
+  <%= link_to 'Show User\'s Posts', posts_path%>
+  <%= link_to 'Create Post', new_post_path%>
+  <%= link_to 'Back', root_path%>
+  <%= link_to 'Delete Bio', bio_path(@bio), method: :delete%>
+</div>

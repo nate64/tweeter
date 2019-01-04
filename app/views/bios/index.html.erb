@@ -1,0 +1,21 @@
+<h2>All Tweeter Bios</h2>
+
+<% if !(current_user.bio)%>
+  <%= link_to 'Create Bio', new_bio_path%>
+<%end%>
+
+
+<% @bios.each do |bio| %>
+  <div class="image">
+    <img
+      src="https://robohash.org/<%= bio.get_avatar %>?set=set3"
+      alt="avatar"
+    />
+  </div>
+  <h4>
+    
+    <div>Profile Name: <%= bio.user.first_name%></div>
+
+    <%= link_to 'Bio', bio_path(bio)%>
+  </h4>
+<%end%>

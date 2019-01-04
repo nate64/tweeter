@@ -1,0 +1,7 @@
+<h1>Tweet a Post</h1>
+<br />
+<%= form_for @post do |f| %>
+<%= f.label :Tweet %>
+<%= f.text_field :content, requied: true, autofocus: true %>
+<%= f.submit %>
+<% end %>
